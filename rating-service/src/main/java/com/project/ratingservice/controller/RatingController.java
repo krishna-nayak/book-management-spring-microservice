@@ -1,9 +1,9 @@
-package com.project.ratingservice.Controller;
-
+package com.project.ratingservice.controller;
 
 import com.project.ratingservice.ExteranlService.UserService;
-import com.project.ratingservice.Model.Rating;
-import com.project.ratingservice.Services.RatingService;
+import com.project.ratingservice.model.Rating;
+import com.project.ratingservice.services.RatingService;
+import com.project.ratingservice.dto.RatingDto;
 import com.project.ratingservice.dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,14 +16,23 @@ import java.util.List;
 @RequestMapping("/ratings")
 public class RatingController {
 
-    @Autowired
-    RatingService ratingService;
+    private final RatingService ratingService;
+    private final UserService userService;
 
     @Autowired
-    UserService userService;
+    public RatingController(RatingService ratingService, UserService userService) {
+        this.ratingService = ratingService;
+        this.userService = userService;
+    }
 
     @PostMapping()
-    public ResponseEntity<Rating> create(@RequestBody Rating rating) {
+    public ResponseEntity<Rating> create(@RequestBody RatingDto ratingDto) {
+        Rating rating = new Rating();
+        rating.setRating(ratingDto.rating());
+        rating.setFeedback(ratingDto.feedback());
+        rating.setBookId(ratingDto.bookId());
+        rating.setUserId(ratingDto.userId());
+
         return ResponseEntity.status(HttpStatus.CREATED).body(ratingService.create(rating));
     }
 

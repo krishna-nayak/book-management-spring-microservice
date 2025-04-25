@@ -1,8 +1,8 @@
-package com.project.ratingservice.Services.impl;
+package com.project.ratingservice.services.impl;
 
-import com.project.ratingservice.Model.Rating;
+import com.project.ratingservice.model.Rating;
 import com.project.ratingservice.Repository.RatingRepository;
-import com.project.ratingservice.Services.RatingService;
+import com.project.ratingservice.services.RatingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.project.ratingservice.Model;
+package com.project.ratingservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
