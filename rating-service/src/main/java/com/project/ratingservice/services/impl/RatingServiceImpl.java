@@ -10,8 +10,13 @@ import java.util.List;
 
 @Service
 public class RatingServiceImpl implements RatingService {
+    private final RatingRepository ratingRepository;
+
     @Autowired
-    RatingRepository ratingRepository;
+    public RatingServiceImpl(RatingRepository ratingRepository) {
+        this.ratingRepository = ratingRepository;
+    }
+
     @Override
     public Rating create(Rating rating) {
         return ratingRepository.save(rating);
@@ -21,11 +26,11 @@ public class RatingServiceImpl implements RatingService {
         return ratingRepository.findAll();
     }
     @Override
-    public List<Rating> getRatingByUserId(String user_id) {
-        return ratingRepository.findByUserId(user_id);
+    public List<Rating> getRatingByUserId(String userId) {
+        return ratingRepository.findByUserId(userId);
     }
     @Override
-    public List<Rating> getRatingByBookId(String book_id) {
-        return ratingRepository.findByBookId(book_id);
+    public List<Rating> getRatingByBookId(String bookId) {
+        return ratingRepository.findByBookId(bookId);
     }
 }

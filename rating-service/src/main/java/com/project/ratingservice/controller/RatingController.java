@@ -28,7 +28,7 @@ public class RatingController {
     @PostMapping()
     public ResponseEntity<Rating> create(@RequestBody RatingDto ratingDto) {
         Rating rating = new Rating();
-        rating.setRating(ratingDto.rating());
+        rating.setRate(ratingDto.rate());
         rating.setFeedback(ratingDto.feedback());
         rating.setBookId(ratingDto.bookId());
         rating.setUserId(ratingDto.userId());
