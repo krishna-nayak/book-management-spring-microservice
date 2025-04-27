@@ -1,7 +1,7 @@
-package com.project.userservice.Controller;
+package com.project.userservice.controller;
 
-import com.project.userservice.Model.User;
-import com.project.userservice.Service.Impl.UserServiceImpl;
+import com.project.userservice.model.User;
+import com.project.userservice.services.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

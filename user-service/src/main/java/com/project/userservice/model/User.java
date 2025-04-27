@@ -1,4 +1,4 @@
-package com.project.userservice.Model;
+package com.project.userservice.model;
 
 import com.project.userservice.dto.Rating;
 import lombok.AllArgsConstructor;

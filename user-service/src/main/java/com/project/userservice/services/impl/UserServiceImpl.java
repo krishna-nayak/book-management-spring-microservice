@@ -1,13 +1,13 @@
-package com.project.userservice.Service.Impl;
+package com.project.userservice.services.impl;
 
-import com.project.userservice.Exceptions.ResourceNotFoundException;
-import com.project.userservice.ExtranalService.BookServices;
-import com.project.userservice.ExtranalService.RatingService;
-import com.project.userservice.Model.User;
-import com.project.userservice.Repositories.UserRepository;
-import com.project.userservice.Service.UserService;
 import com.project.userservice.dto.Book;
 import com.project.userservice.dto.Rating;
+import com.project.userservice.exceptions.ResourceNotFoundException;
+import com.project.userservice.extranal.services.BookServices;
+import com.project.userservice.extranal.services.RatingService;
+import com.project.userservice.model.User;
+import com.project.userservice.repositories.UserRepository;
+import com.project.userservice.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

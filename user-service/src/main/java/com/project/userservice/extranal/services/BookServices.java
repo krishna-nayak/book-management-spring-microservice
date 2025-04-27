@@ -1,4 +1,4 @@
-package com.project.userservice.ExtranalService;
+package com.project.userservice.extranal.services;
 
 import com.project.userservice.dto.Book;
 import org.springframework.cloud.openfeign.FeignClient;

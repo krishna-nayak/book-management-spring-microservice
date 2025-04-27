@@ -1,6 +1,6 @@
-package com.project.userservice.Service;
+package com.project.userservice.services;
 
-import com.project.userservice.Model.User;
+import com.project.userservice.model.User;
 
 import java.util.List;
 

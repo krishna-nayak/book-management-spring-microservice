@@ -1,8 +1,8 @@
-package com.project.userservice.Advice;
+package com.project.userservice.advice;
 
 
-import com.project.userservice.Exceptions.ResourceNotFoundException;
-import com.project.userservice.Payload.ApiResponse;
+import com.project.userservice.exceptions.ResourceNotFoundException;
+import com.project.userservice.payload.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

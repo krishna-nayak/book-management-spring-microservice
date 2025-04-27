@@ -1,4 +1,4 @@
-package com.project.userservice.Payload;
+package com.project.userservice.payload;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
