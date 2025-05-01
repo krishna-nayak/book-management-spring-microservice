@@ -1,6 +1,6 @@
 package com.project.ratingservice.controller;
 
-import com.project.ratingservice.ExteranlService.UserService;
+import com.project.ratingservice.external.services.UserService;
 import com.project.ratingservice.model.Rating;
 import com.project.ratingservice.services.RatingService;
 import com.project.ratingservice.dto.RatingDto;

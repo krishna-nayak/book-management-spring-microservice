@@ -1,4 +1,4 @@
-package com.project.ratingservice.ExteranlService;
+package com.project.ratingservice.external.services;
 
 
 import com.project.ratingservice.dto.User;
