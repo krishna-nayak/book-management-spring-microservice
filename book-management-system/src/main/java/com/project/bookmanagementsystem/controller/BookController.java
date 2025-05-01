@@ -1,8 +1,8 @@
-package com.project.bookmanagementsystem.Controllers;
+package com.project.bookmanagementsystem.controller;
 
 import com.project.bookmanagementsystem.Exception.BookNotFoundException;
-import com.project.bookmanagementsystem.Model.BookItem;
-import com.project.bookmanagementsystem.Services.BookService;
+import com.project.bookmanagementsystem.model.BookItem;
+import com.project.bookmanagementsystem.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

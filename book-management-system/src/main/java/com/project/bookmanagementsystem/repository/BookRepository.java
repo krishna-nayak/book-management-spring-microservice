@@ -1,6 +1,6 @@
-package com.project.bookmanagementsystem.Repository;
+package com.project.bookmanagementsystem.repository;
 
-import com.project.bookmanagementsystem.Model.BookItem;
+import com.project.bookmanagementsystem.model.BookItem;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

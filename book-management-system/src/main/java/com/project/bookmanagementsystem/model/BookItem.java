@@ -1,4 +1,4 @@
-package com.project.bookmanagementsystem.Model;
+package com.project.bookmanagementsystem.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

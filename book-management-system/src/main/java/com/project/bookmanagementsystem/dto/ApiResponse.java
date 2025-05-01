@@ -1,4 +1,4 @@
-package com.project.bookmanagementsystem.DTO;
+package com.project.bookmanagementsystem.dto;
 
 
 public class ApiResponse {

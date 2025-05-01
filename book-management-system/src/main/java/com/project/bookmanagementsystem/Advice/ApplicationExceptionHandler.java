@@ -1,6 +1,6 @@
-package com.project.bookmanagementsystem.Advice;
+package com.project.bookmanagementsystem.advice;
 
-import com.project.bookmanagementsystem.DTO.ApiResponse;
+import com.project.bookmanagementsystem.dto.ApiResponse;
 import com.project.bookmanagementsystem.Exception.BookNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.HashMap;
 import java.util.Map;
-
 
 @RestControllerAdvice
 public class ApplicationExceptionHandler {

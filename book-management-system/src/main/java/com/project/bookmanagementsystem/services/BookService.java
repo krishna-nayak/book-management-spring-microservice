@@ -1,8 +1,8 @@
-package com.project.bookmanagementsystem.Services;
+package com.project.bookmanagementsystem.services;
 
 import com.project.bookmanagementsystem.Exception.BookNotFoundException;
-import com.project.bookmanagementsystem.Model.BookItem;
-import com.project.bookmanagementsystem.Repository.BookRepository;
+import com.project.bookmanagementsystem.model.BookItem;
+import com.project.bookmanagementsystem.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -38,8 +38,7 @@ public class BookService {
         return updateBookItem;
     }
     public BookItem findBookById(String id) throws BookNotFoundException {
-        BookItem book = bookRepository.findById(id).orElseThrow(() -> new BookNotFoundException("Book Not Found of id: "+id));
-        return book;
+        return bookRepository.findById(id).orElseThrow(() -> new BookNotFoundException("Book Not Found of id: "+id));
     }
     public List<BookItem> findAll() {
         return bookRepository.findAll();
