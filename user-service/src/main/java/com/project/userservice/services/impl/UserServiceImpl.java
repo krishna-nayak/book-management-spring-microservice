@@ -12,19 +12,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+    private final BookServices bookService;
+    private final RatingService ratingService;
 
     @Autowired
-    private BookServices bookService;
-
-    @Autowired
-    private RatingService ratingService;
+    public UserServiceImpl(UserRepository userRepository, BookServices bookService, RatingService ratingService) {
+        this.userRepository = userRepository;
+        this.bookService = bookService;
+        this.ratingService = ratingService;
+    }
 
     @Override
     public User saveUser(User user) {
@@ -38,18 +39,18 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserById(String id) {
-            User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User with the given id is not found on server: " + id));
+        User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User with the given id is not found on server: " + id));
 //      Getting user rating through Rating microservices
 //      {{rating_url}}/ratings/user/:userId
-            List<Rating> ratingOfUser = ratingService.getRatingByUserID(id);
-            List<Rating> ratingStream = ratingOfUser.stream().map(rating -> {
-                Book book = bookService.getBookId(rating.getBookId());
-                rating.setBook(book);
-                return rating;
-            }).collect(Collectors.toList());
+        List<Rating> ratingOfUser = ratingService.getRatingByUserID(id);
+        List<Rating> ratingStream = ratingOfUser.stream().map(rating -> {
+            Book book = bookService.getBookId(rating.getBookId());
+            rating.setBook(book);
+            return rating;
+        }).toList();
 
-            user.setRating(ratingStream);
-            return user;
+        user.setRating(ratingStream);
+        return user;
     }
 
 
