@@ -1,4 +1,4 @@
-package com.project.ratingservice.Repository;
+package com.project.ratingservice.repository;
 
 import com.project.ratingservice.model.Rating;
 import org.springframework.data.mongodb.repository.MongoRepository;
