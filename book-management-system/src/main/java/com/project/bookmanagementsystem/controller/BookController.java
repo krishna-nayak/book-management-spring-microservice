@@ -33,11 +33,6 @@ public class BookController {
         return ResponseEntity.status(HttpStatus.OK).body(book);
     }
 
-//    @GetMapping("/{id}")
-//    public ResponseEntity<String> getBookById(@PathVariable("id") String id){
-//        return  ResponseEntity.ok("Id: "+id);
-//    }
-
     @PostMapping()
     public ResponseEntity<String> addBookItem(@RequestBody BookItem bookItem) {
             bookService.saveBook(bookItem);

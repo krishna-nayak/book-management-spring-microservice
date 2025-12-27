@@ -1,7 +1,7 @@
 package com.project.bookmanagementsystem.advice;
 
-import com.project.bookmanagementsystem.dto.ApiResponse;
 import com.project.bookmanagementsystem.Exception.BookNotFoundException;
+import com.project.bookmanagementsystem.dto.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -20,8 +20,6 @@ public class ApplicationExceptionHandler {
 
         errorMap.put("errorMessage", ex.getMessage());
 
-        ApiResponse apiResponse = new ApiResponse(errorMap, false);
-
-        return apiResponse;
+        return new ApiResponse(errorMap, false);
     }
 }

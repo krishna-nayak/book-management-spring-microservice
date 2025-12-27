@@ -25,5 +25,4 @@ public class BookItem {
 
     public String publisher;
     private String description;
-
 }
